@@ -1,0 +1,8 @@
+checkpoints/*.pth
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+data/chest_xray/
+.env
+venv/
