@@ -1,0 +1,11 @@
+sample_id,image_filename,true_label,label_index,dataset_split,phase2_prediction,phase2_confidence,phase3_prediction,phase3_confidence,correct_p2,correct_p3
+1,IM-0001-0001.jpeg,NORMAL,0,test,NORMAL,91.23,NORMAL,88.45,True,True
+2,person1_bacteria_1.jpeg,PNEUMONIA,1,test,PNEUMONIA,97.84,PNEUMONIA,95.32,True,True
+3,IM-0002-0001.jpeg,NORMAL,0,test,PNEUMONIA,54.21,NORMAL,72.18,False,True
+4,person2_bacteria_2.jpeg,PNEUMONIA,1,test,PNEUMONIA,99.12,PNEUMONIA,97.65,True,True
+5,IM-0003-0001.jpeg,NORMAL,0,test,NORMAL,85.67,NORMAL,81.34,True,True
+6,person3_virus_1.jpeg,PNEUMONIA,1,test,NORMAL,48.92,PNEUMONIA,89.23,False,True
+7,IM-0004-0001.jpeg,NORMAL,0,test,NORMAL,93.45,PNEUMONIA,61.23,True,False
+8,person4_bacteria_3.jpeg,PNEUMONIA,1,test,PNEUMONIA,98.76,PNEUMONIA,96.54,True,True
+9,IM-0005-0001.jpeg,NORMAL,0,test,NORMAL,79.32,NORMAL,75.89,True,True
+10,person5_virus_2.jpeg,PNEUMONIA,1,test,PNEUMONIA,95.43,PNEUMONIA,93.21,True,True
