@@ -1,0 +1,83 @@
+{
+    "phase": 3,
+    "dataset": "Kermany Chest X-Ray + BloodMNIST (Cross-Domain)",
+    "description": "Partial Fine-Tuning with Layer Freezing + Label Smoothing",
+    "trainable_parameters": "~14 Million",
+    "frozen_layers": "Patch Embedding + Encoder Blocks 0-9",
+    "label_smoothing": 0.1,
+    "parameter_reduction": "84%",
+
+    "kermany_results": {
+        "test_set_size": 624,
+        "best_epoch": 5,
+        "best_val_f1": 0.9527,
+        "total_epochs_trained": 9,
+        "early_stopping_triggered": true,
+
+        "test_metrics": {
+            "accuracy":    0.8990,
+            "precision":   0.8960,
+            "recall":      0.9487,
+            "specificity": 0.8162,
+            "f1_score":    0.9215,
+            "auc_roc":     0.9487
+        },
+
+        "confusion_matrix": {
+            "true_negatives":  191,
+            "false_positives": 43,
+            "false_negatives": 20,
+            "true_positives":  370
+        },
+
+        "bootstrap_confidence_intervals": {
+            "accuracy":    {"mean": 0.8983, "lower": 0.8750, "upper": 0.9231},
+            "recall":      {"mean": 0.9480, "lower": 0.9243, "upper": 0.9695},
+            "specificity": {"mean": 0.8155, "lower": 0.7649, "upper": 0.8649},
+            "f1_score":    {"mean": 0.9209, "lower": 0.9012, "upper": 0.9409},
+            "auc_roc":     {"mean": 0.9483, "lower": 0.9300, "upper": 0.9667}
+        },
+
+        "comparison_with_phase2": {
+            "recall_change":      "+2.31% (IMPROVED)",
+            "accuracy_change":    "-1.77%",
+            "specificity_change": "-8.55%",
+            "f1_change":          "-1.13%",
+            "auc_change":         "-0.021"
+        },
+
+        "training_collapse_prevented": true,
+        "training_loss_range": "0.2872 to 0.2148 (never approached zero)"
+    },
+
+    "bloodmnist_results": {
+        "dataset": "BloodMNIST (MedMNIST v2)",
+        "num_classes": 8,
+        "test_set_size": 3421,
+        "best_epoch": 12,
+        "best_val_f1": 0.9096,
+        "early_stopping_triggered": false,
+
+        "test_metrics": {
+            "accuracy":  0.9030,
+            "precision": 0.9036,
+            "recall":    0.8882,
+            "f1_score":  0.8925,
+            "auc_roc":   0.9917
+        },
+
+        "per_class_f1": {
+            "Basophil":              0.87,
+            "Eosinophil":            0.97,
+            "Erythroblast":          0.91,
+            "Immature_Granulocytes": 0.80,
+            "Lymphocyte":            0.89,
+            "Monocyte":              0.79,
+            "Neutrophil":            0.92,
+            "Platelet":              0.99
+        },
+
+        "cross_domain_generalisation": true,
+        "notes": "Same Phase 3 config applied to radically different domain. Strong AUC=0.9917 confirms methodology generalises."
+    }
+}
