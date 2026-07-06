@@ -1,8 +1,6 @@
 # Efficient Fine-Tuning of Vision Transformer for Pneumonia Detection: A Partial Freezing Approach
 
-**Course:** Deep Learning (CS-4112) | BS Data Science  
-**Institution:** FAST-NUCES, Islamabad  
-**Authors:** Munaza Tariq (i232545) | Amaim Anwar (i232614) | Areeba Arshad (i232656)
+**Authors:** Munaza Tariq | Amaim Anwar | Areeba Arshad
 
 ---
 
